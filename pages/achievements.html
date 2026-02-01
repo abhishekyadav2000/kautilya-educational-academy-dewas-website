@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Achievements and news from Kautilya Educational Academy, Dewas - celebrating student success, events, and milestones.">
+    <meta name="keywords" content="school achievements, student success, awards, Kautilya Academy news, Dewas school events">
+    
+    <title>Achievements & News | Kautilya Educational Academy, Dewas</title>
+    
+    <link rel="icon" type="image/png" href="../assets/images/school logo.png">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader" role="status" aria-label="Loading">
+        <div class="loader-decoration"></div>
+        <div class="loader-decoration"></div>
+        <div class="loader-decoration"></div>
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="../assets/images/school logo.png" alt="Kautilya Educational Academy">
+            </div>
+            <div class="loader-text">Kautilya Educational Academy</div>
+            <div class="loader-subtext">Dewas • Madhya Pradesh</div>
+            <div class="loader-progress">
+                <div class="loader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/school logo.png" alt="Kautilya Educational Academy Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="school-name">Kautilya Educational Academy</span>
+                    <span class="school-location">Dewas, Madhya Pradesh</span>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" class="nav-link">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#vision">Vision & Mission</a></li>
+                            <li><a href="about.html#principal">Principal's Message</a></li>
+                            <li><a href="about.html#management">Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="academics.html" class="nav-link">Academics</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="academics.html#curriculum">Curriculum</a></li>
+                            <li><a href="academics.html#pre-primary">Pre-Primary</a></li>
+                            <li><a href="academics.html#primary">Primary School</a></li>
+                            <li><a href="academics.html#secondary">Secondary School</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li class="nav-item"><a href="campus.html" class="nav-link">Campus</a></li>
+                    <li class="nav-item"><a href="student-life.html" class="nav-link">Student Life</a></li>
+                    <li class="nav-item"><a href="achievements.html" class="nav-link active">Achievements</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero achievements-hero">
+        <div class="container">
+            <h1>🏆 Achievements & News</h1>
+            <p class="hero-subtitle">Celebrating our students' success and school milestones</p>
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <span>Achievements</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="section bg-light filter-section">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">📋 All Posts</button>
+                <button class="filter-tab" data-filter="achievement">🏆 Achievements</button>
+                <button class="filter-tab" data-filter="event">🎉 Events</button>
+                <button class="filter-tab" data-filter="announcement">📢 Announcements</button>
+                <button class="filter-tab" data-filter="sports">⚽ Sports</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Feed -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="blog-feed" id="blogFeed">
+                <!-- Posts will be loaded here dynamically -->
+                <div class="loading-posts">
+                    <div class="loading-spinner"></div>
+                    <p>Loading achievements...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Button (Hidden by default) -->
+    <button class="admin-toggle" id="adminToggle" title="Admin Panel">
+        ⚙️
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="../assets/images/school logo.png" alt="Kautilya Educational Academy Logo" class="footer-logo-img">
+                        <div>
+                            <h3>Kautilya Educational Academy</h3>
+                            <p>Dewas, Madhya Pradesh</p>
+                        </div>
+                    </div>
+                    <p>Nurturing young minds with quality education, values, and skills for a brighter future since our establishment.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p>📍 Bhopal Road, Khatamba, Dewas 455001</p>
+                    <p>📞 +91 9926042015</p>
+                    <p>✉️ principalschool13@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kautilya Educational Academy, Dewas. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/blog-manager.js"></script>
+    <script src="../assets/js/chat-assistant.js"></script>
+</body>
+</html>
