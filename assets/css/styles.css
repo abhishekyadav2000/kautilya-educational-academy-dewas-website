@@ -2624,93 +2624,220 @@ tr:hover {
 }
 
 /* =====================================================
-   WhatsApp Floating Button
+   Social Media Floating Widget
    ===================================================== */
-.whatsapp-float {
+.social-media-widget {
     position: fixed;
     bottom: 100px;
     right: 24px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    animation: whatsapp-pulse 2s ease-in-out infinite;
     z-index: 9998;
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-}
-
-.whatsapp-float svg {
-    width: 30px;
-    height: 30px;
-}
-
-.whatsapp-tooltip {
-    position: absolute;
-    right: 70px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #ffffff;
-    color: #333;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    white-space: nowrap;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
+.social-toggle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
 }
 
-.whatsapp-tooltip::before {
-    content: '';
+.social-toggle svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+}
+
+.social-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.social-toggle.active {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.social-pulse {
     position: absolute;
-    right: -6px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 6px solid transparent;
-    border-left-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(102, 126, 234, 0.4);
+    animation: pulse-animation 2s ease-in-out infinite;
 }
 
-.whatsapp-float:hover .whatsapp-tooltip {
-    opacity: 1;
-    visibility: visible;
-}
-
-@keyframes whatsapp-pulse {
+@keyframes pulse-animation {
     0%, 100% {
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.4);
+        transform: scale(1);
+        opacity: 0.5;
     }
     50% {
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0);
+        transform: scale(1.3);
+        opacity: 0;
     }
 }
 
-/* Mobile Responsive - WhatsApp */
+.social-links {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.social-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background: #f8f9fa;
+}
+
+.social-link:hover {
+    transform: translateX(-5px);
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.social-link.whatsapp {
+    background: #e8f8f0;
+}
+
+.social-link.whatsapp:hover {
+    background: #25D366;
+    color: white;
+}
+
+.social-link.whatsapp:hover svg path {
+    fill: white;
+}
+
+.social-link.facebook {
+    background: #e7f0ff;
+}
+
+.social-link.facebook:hover {
+    background: #1877f2;
+    color: white;
+}
+
+.social-link.facebook:hover svg path {
+    fill: white;
+}
+
+.social-link.instagram {
+    background: #fef0f5;
+}
+
+.social-link.instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+}
+
+.social-link.instagram:hover svg path {
+    fill: white;
+}
+
+.social-link.youtube {
+    background: #fff0f0;
+}
+
+.social-link.youtube:hover {
+    background: #ff0000;
+    color: white;
+}
+
+.social-link.youtube:hover svg path {
+    fill: white;
+}
+
+.social-link.twitter {
+    background: #f0f0f0;
+}
+
+.social-link.twitter:hover {
+    background: #000000;
+    color: white;
+}
+
+.social-link.twitter:hover svg path {
+    fill: white;
+}
+
+.social-link.linkedin {
+    background: #e7f3ff;
+}
+
+.social-link.linkedin:hover {
+    background: #0077b5;
+    color: white;
+}
+
+.social-link.linkedin:hover svg path {
+    fill: white;
+}
+
+/* Mobile Responsive - Social Widget */
 @media (max-width: 480px) {
-    .whatsapp-float {
+    .social-media-widget {
         bottom: 90px;
         right: 16px;
+    }
+    
+    .social-toggle {
         width: 50px;
         height: 50px;
     }
     
-    .whatsapp-float svg {
-        width: 26px;
-        height: 26px;
+    .social-toggle svg {
+        width: 24px;
+        height: 24px;
     }
     
-    .whatsapp-tooltip {
-        display: none;
+    .social-links {
+        right: 0;
+        min-width: 160px;
+    }
+    
+    .social-link {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .social-link svg {
+        width: 20px;
+        height: 20px;
     }
 }
