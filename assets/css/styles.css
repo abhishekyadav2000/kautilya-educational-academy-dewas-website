@@ -2658,7 +2658,8 @@ tr:hover {
     position: fixed;
     bottom: 100px;
     right: 24px;
-    z-index: 9998;
+    z-index: 10050; /* Ensure always on top */
+    pointer-events: auto;
 }
 
 .social-toggle {

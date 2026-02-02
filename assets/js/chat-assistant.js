@@ -475,16 +475,16 @@
     }
 
     // Initialize on DOM ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-            createChatWidget();
-            createSocialMediaWidget();
-            initChat();
-        });
-    } else {
+    // Always create social widget after DOM and after hero
+    function safeInit() {
         createChatWidget();
-        createSocialMediaWidget();
+        setTimeout(createSocialMediaWidget, 200); // Delay to ensure hero/overlay is rendered
         initChat();
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', safeInit);
+    } else {
+        safeInit();
     }
 
 })();
