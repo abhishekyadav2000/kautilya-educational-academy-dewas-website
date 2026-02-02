@@ -106,8 +106,21 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section (Modern with Overlay) -->
+    <section class="hero hero-modern" id="hero-modern" style="display: block;">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1>Welcome to Kautilya Educational Academy</h1>
+        <p>Empowering young minds with knowledge, values, and skills for a brighter tomorrow. Where excellence meets education in the heart of Dewas.</p>
+        <div class="hero-buttons">
+          <a href="pages/admissions.html" class="btn btn-primary">Apply for Admission</a>
+          <a href="pages/about.html" class="btn btn-secondary">Discover More</a>
+        </div>
+      </div>
+      <button id="toggle-hero-style" class="btn btn-white" style="position:absolute;top:1rem;right:1rem;z-index:10;">Switch Hero Style</button>
+    </section>
+    <!-- Hero Section (Original, hidden by default) -->
+    <section class="hero hero-original" id="hero-original" style="display: none;">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-animate-title">Welcome to Kautilya Educational Academy</h1>
@@ -410,7 +423,26 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js?v=2026020101"></script>
-    <script src="assets/js/chat-assistant.js?v=2026020101"></script>
+        <script src="assets/js/main.js?v=2026020201"></script>
+        <script src="assets/js/chat-assistant.js?v=2026020201"></script>
+        <script>
+        // Toggle between modern and original hero section
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleBtn = document.getElementById('toggle-hero-style');
+            var modernHero = document.getElementById('hero-modern');
+            var originalHero = document.getElementById('hero-original');
+            if (toggleBtn && modernHero && originalHero) {
+                toggleBtn.addEventListener('click', function() {
+                    if (modernHero.style.display !== 'none') {
+                        modernHero.style.display = 'none';
+                        originalHero.style.display = 'block';
+                    } else {
+                        modernHero.style.display = 'block';
+                        originalHero.style.display = 'none';
+                    }
+                });
+            }
+        });
+        </script>
 </body>
 </html>
